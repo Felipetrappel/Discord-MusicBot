@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music App</title>
+	<link rel="icon" href="assets/favicon.svg">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="app-header">
+		<h1>Music App</h1>
+	</header>
+	<main class="app-main">
+		<section class="player">
+			<div class="cover-and-info">
+				<img id="cover" alt="Capa do álbum" src="assets/cover-placeholder.svg">
+				<div class="track-info">
+					<h2 id="title">—</h2>
+					<p id="artist">—</p>
+				</div>
+			</div>
+			<div class="controls">
+				<button id="prev" aria-label="Anterior">⏮</button>
+				<button id="play" aria-label="Reproduzir/Pausar">▶️</button>
+				<button id="next" aria-label="Próxima">⏭</button>
+			</div>
+			<div class="progress">
+				<span id="currentTime">0:00</span>
+				<input id="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Barra de progresso">
+				<span id="duration">0:00</span>
+			</div>
+			<div class="volume">
+				<span>🔊</span>
+				<input id="volume" type="range" min="0" max="1" value="0.8" step="0.01" aria-label="Volume">
+			</div>
+		</section>
+		<section class="visualizer">
+			<canvas id="viz" width="800" height="200" aria-label="Visualizador de áudio"></canvas>
+		</section>
+		<section class="playlist">
+			<h3>Playlist</h3>
+			<ul id="playlist"></ul>
+		</section>
+	</main>
+	<footer class="app-footer">
+		<p>Feito com ❤️</p>
+	</footer>
+	<script src="app.js" type="module"></script>
+</body>
+</html>
